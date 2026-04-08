@@ -11,6 +11,7 @@
 <ul>
     {#each todos as todo}
     <li>
+        <input type="checkbox" bind:checked={todo.done}>
         {todo.title}
     </li>
     {/each}
