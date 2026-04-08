@@ -1,6 +1,7 @@
 <script>
     import CanvasSquare from '$lib/components/CanvasSquare.svelte';
   import ClicksCounter from '$lib/components/ClicksCounter.svelte'
+  import ToDoList from '$lib/components/ToDoList.svelte' 
 
 
   let count = $state(5)
@@ -21,6 +22,8 @@
 
 
 <CanvasSquare/>
+
+<ToDoList/>
 
 <style>
   h1 {
