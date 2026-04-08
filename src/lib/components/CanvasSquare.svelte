@@ -1,14 +1,19 @@
 <script>
+import { onMount } from "svelte";
     let size = $state(50)
     let color = $state("#ff3e00")
 
     let canvas 
 
-    const context = canvas.getContext("2d")
+    onMount(() => {
+         const context = canvas.getContext("2d")
     context.clearRect(0, 0, canvas.width, canvas.height)
 
     context.fillStyle = color
     context.fillRect(0, 0, size, size)
+    })
+
+   
 </script>
 
 <h3>Canvas Square</h3>
