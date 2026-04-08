@@ -11,8 +11,12 @@
 
 <ClicksCounter bind:initialCount={count}/>
 
-
+{#if count > 10 && count < 20}
 <p>count from parents is {count}</p>
+{/if}
+
+
+
 
 <CanvasSquare/>
 
