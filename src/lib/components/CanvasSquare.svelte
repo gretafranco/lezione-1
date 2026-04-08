@@ -1,11 +1,11 @@
 <script>
-import { onMount } from "svelte";
+
     let size = $state(50)
     let color = $state("#ff3e00")
 
     let canvas 
 
-    onMount(() => {
+    $effect(() => {
          const context = canvas.getContext("2d")
     context.clearRect(0, 0, canvas.width, canvas.height)
 
@@ -22,10 +22,10 @@ import { onMount } from "svelte";
     <canvas bind:this={canvas} width="100" height="100"></canvas>
     <nav>
         <label>
-            Size: <input type="range" bind :value={size}>
+            Size: <input type="range" bind:value={size}>
         </label>
         <label>
-            Color: <input type="color" bind :value={color}>
+            Color: <input type="color" bind:value={color}>
         </label>
     </nav>
 </article>
