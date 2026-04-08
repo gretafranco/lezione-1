@@ -1,5 +1,6 @@
 <script>
   let count = $state(0)
+  let doubled = $derived(count * 2)
 
   console.log('Hello, Svelte!')
 </script>
@@ -11,9 +12,10 @@
   clicks:{count}
 </button>
 
+<span>doubled is {doubled}</span>
+
 <style>
   h1 {
     color: deepskyblue;
   }
-  
 </style>
